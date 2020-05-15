@@ -3,10 +3,10 @@
 
 TString::TString() :init(0), size(0), length(0)
 {
-
 }
 
-TString::TString(char b, int leng) {
+TString::TString(char b, int leng) 
+{
 	size = leng + 1;
 	init = new char[size];
 	length = leng;
@@ -15,8 +15,8 @@ TString::TString(char b, int leng) {
 }
 
 TString::TString(const char* tstr) {
-	if (strlen(tstr) > 0) {
-
+	if (strlen(tstr) > 0)
+	{
 		size = strlen(tstr) + 1;
 		length = strlen(tstr);
 		init = new char[strlen(tstr) + 1];
@@ -26,7 +26,8 @@ TString::TString(const char* tstr) {
 
 }
 
-TString::TString(TString &a) {
+TString::TString(TString &a) 
+{
 	size = a.get_l() + 1;
 	length = a.get_l();
 	init = new char[size];
@@ -34,7 +35,8 @@ TString::TString(TString &a) {
 	init[length] = 0;
 }
 
-TString::~TString() {
+TString::~TString()
+{
 	if (init != NULL)
 		delete[] init;
 }
